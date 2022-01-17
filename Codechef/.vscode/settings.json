@@ -1,0 +1,11 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "*.module": "php",
+        "ostream": "cpp",
+        "functional": "cpp",
+        "array": "cpp",
+        "string": "cpp"
+    },
+    "liveServer.settings.port": 5501
+}

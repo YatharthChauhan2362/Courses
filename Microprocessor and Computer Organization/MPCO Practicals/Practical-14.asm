@@ -5,6 +5,10 @@
 
 org 100h
 
-; add your code here
+MOV [2000H], 0011B 
+MOV [2001H], 0101B 
+
+MOV AL,[2000H] 
+XOR AL,[2001H]
 
 ret

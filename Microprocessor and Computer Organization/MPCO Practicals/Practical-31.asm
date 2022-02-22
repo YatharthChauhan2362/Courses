@@ -4,32 +4,38 @@
 
 org 100h
 
-mov dh,48h
-mov al,46h
-mov bl,86h
-mov cx,10h
+mov cx,03h  
+mov [2000h],45h
+mov [2001h],10h
+mov [2002h],51h
+
+mov SI,2000h
 
 l1:
-mov ah,06
-mov dl,al
-int 21h
-dec al
-mov bl,60
+cmp [SI],50h
+js digit
+cmp [SI],0A0h
+js  Digit1 
 
-l2:
-dec bl
-jnz l2
-cmp dh,al
-jz l3
+mov ax,100
+out 199,ax
+inc SI
 loop l1
 
-l3:
-mov al,39h
+digit:
+inc SI
+mov ax,1
+mov 199,ax
 loop l1
+
+digit1:
+
+inc SI
+mov ax,10
+out 199,ax
+loop l1
+
 
 
 ret
-
-
-
 

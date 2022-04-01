@@ -5,7 +5,18 @@
         "ostream": "cpp",
         "functional": "cpp",
         "array": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "deque": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "bitset": "cpp",
+        "utility": "cpp"
     },
     "liveServer.settings.port": 5501
 }

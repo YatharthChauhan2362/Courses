@@ -3,20 +3,24 @@
 ; The location of this template is c:\emu8086\inc\0_com_template.txt
 
 
-org 100h
-         
- mov ax,01h
- mov bx,000h
- mov cx,0ah
- mov [4000h],dx
- mov [4001h],ax
- mov bx,4002h
-         
- l1:
- add ax,dx
- mov [bx],ax
- mov dx,[bx-1]
- inc bx
- loop l1
-         
- ret
+org 100h	
+
+MOV AL, 00H
+MOV SI, 3000H
+MOV [SI], AL
+
+ADD SI, 1
+ADD AL, 1
+
+MOV [SI], AL
+
+L1:
+MOV AL, [SI-1]
+ADD AL, [SI]
+ADD SI, 1
+MOV [SI], AL
+	
+LOOP L1:
+HLT
+
+ret

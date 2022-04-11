@@ -1,5 +1,6 @@
 20DCE019 - Yatharth Chauhan
 
+
 CREATE TABLE DEPOSIT1
 (
 ACTNO VARCHAR2(5), 
